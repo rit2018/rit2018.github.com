@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.6/css/swiper.min.css">
+
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family:標楷體;
+        }
+
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .navbarcolor{
+            background-color:#3B1C6D;
+        }
+        
+        .navbar-light .navbar-nav .nav-link {
+            color:#A895C7;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+            color: white;
+        }
+
+        .navsize{
+           font-size: 19pt;
+            /* color: deeppink; */
+        }
+        
+        .nav-bar{
+            position: fixed;
+            width: 100%;
+            z-index: 20;
+        }
+      .bannersize{
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+        }
+
+
+      .history{
+          width: 100%;
+          height: auto;
+        }
+
+      .mainHeader{
+        width: 100%;
+        height:25vh;
+        padding-top: 120px;
+       } 
+      .mainTitle{
+          width: 100%;
+          height:37px;
+          margin-left: auto;
+          margin-right: auto;   
+         
+              
+        }
+  
+     .title{        
+         color: #3B1C6D;
+         font-weight: bold;
+         text-align: center;        
+
+     }
+
+     .title::before{
+         content: "";
+         width: 12%;
+         height: 2px;
+         display: inline-block;
+         vertical-align:middle;         
+         background-color: #3B1C6D;
+        
+     }
+
+
+     .title::after{
+         content: "";
+         width: 12%;
+         height: 2px;
+         display: inline-block;
+         vertical-align:middle;         
+         background-color: #3B1C6D;
+        
+     }
+
+     .row{
+         margin: 0;
+     }
+
+    .contentHistory{
+        max-width: 1170px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 7%;
+    }
+
+    .origin{
+        width: 100%;
+        height: auto;        
+    }
+    
+    .originText{
+        height:auto;
+        padding-top: 3%;    
+    }
+
+    #origindesc{
+        font-size: 14pt;
+        
+    }
+
+    .originPic{       
+        height: 300px;
+        background-image: url(img/02-history/history1.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .development{
+        width: 100%;
+        height: auto;
+    }
+
+    .developmentPhone{
+        display: none;
+    }
+
+    .developmentPic{       
+        height: 300px;
+        background-image: url(img/02-history/history2.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .developmentText{       
+        height:auto; 
+        padding-top: 1.5%;
+        padding-left: 30px;
+    }
+
+    #developmentdesc{
+        font-size: 14pt;
+    }
+
+    .kind{
+        width: 100%;
+        height: 100vh;
+        background-color: #A895C7;
+    }
+
+    .contentKind{
+        max-width: 1170px;
+        height: 510px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .kindPic{
+        width: 100%;
+        height: 100%;
+        background-image: url(img/03-kind/allKind.jpg);
+        background-size: cover;
+        background-position: center;        
+    }
+
+    /* 香水種類phone版 */
+    .contentKindPhone{
+        width: 100%;
+        height: 75vh;
+        display: none;
+    }
+
+    .kindPicPhone{        
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;          
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* background: #fff; */
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    #descBig{
+        font-size: 16pt;
+    }
+
+    #descSmall{
+        font-size: 14pt;
+    }
+
+    .kindText{
+        max-width: 100%;
+        height: 100%;
+        position: absolute; 
+        left: 0;
+        top: 0;
+        display: none;
+        background-color: rgba(0,0,0, 0.7);
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .contentKind:hover .kindText {
+        display: block;
+    }
+
+
+    .kindDesc{
+        color: #fff;
+    }
+
+
+
+    /* 香水味階 */
+
+    .flavor{
+        width: 100%;
+        height: auto;
+        padding-bottom: 180px;
+    }
+    .contentFlavor{
+        width: 61%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flavorDesc{
+        width: 100%;
+    }
+
+    .descSize{
+        font-size: 19pt;
+    }
+
+    .descSize20{
+        font-size: 16pt;
+    }
+
+    .flavorText{       
+        height: 100%;
+        margin: 0;
+    }
+
+    #flavorImg{
+    width: 100%;
+       height: auto;
+    }
+
+    /* 香調分類 */
+    .note{
+        width: 100%;
+        height: auto;
+        background-color: #A895C7;
+    }
+
+    /* 香調表 */
+    .contentNote{
+        width: 100%;
+        height: auto;
+    }
+
+    .noteSwiperSize{
+        max-width: 1170px;
+        height: auto;
+        padding-bottom: 50px;
+    }   
+
+    .perfumeFamilies{
+        max-width: 100%;
+        height: auto;
+    }
+
+    #perfumeFamiliesImg{
+        max-width: 100%;
+    }
+
+    .formDesc{
+        padding-right: 60px;
+        text-align: left;
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    /* 常見香調 */
+    .allNote{
+        width: 100%;
+        /* height: 450px; */
+        display: flex;
+        flex-wrap: wrap;
+	    justify-content: space-evenly;
+	    padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .noteKind{
+        width: 300px;
+        height: 200px;
+    }
+
+    .noteKindPic{
+        width: 100%;
+        height: 180px;
+    }
+
+    .modal-dialog{
+        max-width: 600px;
+    }
+
+    .allperfume{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+	    justify-content: space-evenly;
+    }
+
+
+    .perfumePic{
+        text-align: center;
+        margin-left: 6px;
+    }
+
+    #perfumeSize{
+        width: 140px;
+        height: 140px;
+    }
+
+    /* 使用指南 */
+    .instruction{
+        width: 100%;
+        height: auto;
+    }
+
+    .option{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .option a{
+        font-size: 16pt;
+        font-weight: bold;
+        color: #3B1C6D;
+        border: #3B1C6D solid 2px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-decoration:none;
+    }
+
+    .option a.option-demo,.option a:hover{
+        background-color: #3B1C6D;
+        color: white;
+    }
+
+    .contentInstruction{
+        width: 61%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        padding-bottom: 150px;
+    }
+
+    .precautions{
+        width: 100%;
+        height: auto;
+    }  
+
+
+    .precautions ul li{       
+        font-size: 20pt;
+    }
+
+     .precautions ul p{       
+        font-size: 16pt;
+     }
+
+    @media only screen and (max-width:1148px){
+        #descBig{
+        font-size: 14pt;
+        }
+
+        #descSmall{
+            font-size: 12pt;
+        }
+    }
+
+    /* 平板版 */
+    @media only screen and (max-width:768px){
+        /* 香水歷史 */
+        .development{
+             display: none;
+         }
+
+        .developmentPhone{           
+            height: auto;           
+            display: inline-block;
+        }
+
+        .developmentText{
+            padding-left: 10px;
+        }
+
+        /* 香水種類 */
+        .contentKind{
+             display: none;
+         }
+
+         .contentKindPhone{
+             display: inline-block;
+
+         }         
+
+         /* 香水味階 */
+     
+         .contentFlavor{
+             width: 100%;
+             padding-left: 20px;
+             padding-right: 10px;
+         }
+
+         .contentFlavor{
+             width: 100%;
+         }
+
+        .descSize{
+            font-size: 15pt;
+        }
+
+        .descSize20{
+            font-size: 13pt;
+        }
+
+         /* 常見香調 */
+        .noteKind{
+            width: 30%;
+            height: 150px;
+        }
+
+        .noteKindPic{
+            width: 100%;
+            height: 100px;            
+        }
+
+        /* 使用指南 */
+        .contentInstruction{
+            width: 100%;
+        }
+
+        .option {
+            width: 70%;
+        }
+        
+    }
+
+
+
+     @media only screen and (max-width:540px){
+         /* 香水歷史 */
+         .contentHistory{
+             padding: 0;
+             max-width: 100%;
+         } 
+
+         /* 香水味階 */ 
+        .descSize{
+            font-size: 14pt;
+        }
+
+        .descSize20{
+            font-size: 12pt;
+        }
+
+        .flavorPic{
+            background-image: url('/img/04-flavor/flavorSmall.png');
+            background-size: cover;
+            background-position: center;
+        } 
+
+        /* 常見香調 */
+        .formDesc {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .noteSwiperSize{
+            width: 100%;
+            padding-bottom: 20px;
+        } 
+
+        .noteKind{
+            width: 45%;
+            height: 150px;
+            margin-bottom: 5px;
+        }
+
+        .noteKindPic{
+            width: 100%;
+            height: 100px;            
+        }
+
+        .allperfume {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+
+        #perfumeSize{
+            width: 100px;
+            height: 100px;
+         }
+
+         /* 使用指南 */
+         .option {
+             width: 100%;
+         }
+
+     }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light navbarcolor">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="container">
+                    <ul class="navbar-nav d-flex justify-content-center">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link font-weight-bold navsize" href="#carouselExampleSlidesOnly">首頁 <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeHistory">香水歷史</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeKind">香水種類</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeFlavor">香水味接</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeNote">香調分類</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeInstruction">使用指南</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner4.jpg" alt="fourth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner11.jpg" alt="fifth slide">
+            </div>
+        </div>
+    </div>
+    <div class="history" id="perfumeHistory">
+        <div class="mainHeader" id="historyHeader">
+            <div class="mainTitle" id="historyTitle">
+                <h2 class="title">香水歷史</h2>
+            </div>
+        </div>
+
+        <!-- 香水歷史 -->
+        <div class="contentHistory">
+            <div class="container-fluid">
+                <div class="row origin">
+                    <div class="originText col-12 col-sm-12 col-md-6">
+                        <h3>起源</h3>
+                        <p id="origindesc">香水的英語Perfume是由拉丁文parfumare衍生而來，本義是
+                            「穿透煙霧」，起源於地中海區，最早是用來祭拜神靈，在石器时代，人們認為物體焚燒後散發的煙霧是神靈與大地的聯繫，彷彿在這樣的虛無飄渺、煙霧迷漫的迷離幻境中，人們能與神明交談。</p>
+                    </div>
+                    <div class="originPic col-12 col-sm- 12 col-md-6"></div>
+                </div>
+                <div class="row development">
+                    <div class="developmentPic col-12 col-sm-12 col-md-6"></div>
+                    <div class="developmentText col-12 col-sm-12 col-md-6">
+                        <h3>發展</h3>
+                        <p id="developmentdesc">製造香水的工藝是從古埃及開始的，埃及人不但用香水來洗澡、浸泡船帆，死後用香料裹屍使其永存，形成今日可見的木乃伊。<br>
+                            14世紀製香技術傳到歐洲，主要是貴族和有錢人用來遮蓋如廁之後所產生的味道。這些貴族和有錢人提供資助，成為了西方香水工業被創造的原因。到了18世紀，在法國格拉斯地
+                            區種植有香料植物，作為成長中的香水工業的原料。即使在今天，法國仍然是歐洲香水設計和貿易的中心。</p>
+                    </div>
+                </div>
+                <!-- Phone版 -->
+                <div class="row developmentPhone">
+                    <div class="developmentText col-12 col-sm-12 col-md-6">
+                        <h3>發展</h3>
+                        <p id="developmentdesc">製造香水的工藝是從古埃及開始的，埃及人不但用香水來洗澡、浸泡船帆，死後用香料裹屍使其永存，形成今日可見的木乃伊。<br>
+                            14世紀製香技術傳到歐洲，主要是貴族和有錢人用來遮蓋如廁之後所產生的味道。這些貴族和有錢人提供資助，成為了西方香水工業被創造的原因。到了18世紀，在法國格拉斯地
+                            區種植有香料植物，作為成長中的香水工業的原料。即使在今天，法國仍然是歐洲香水設計和貿易的中心。</p>
+                    </div>
+                    <div class="developmentPic col-12 col-sm-12 col-md-6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 香水種類 -->
+    <div class="kind" id="perfumeKind">
+        <div class="mainHeader" id="kindHeader">
+            <div class="mainTitle" id="kindTitle">
+                <h2 class="title">香水種類</h2>
+            </div>
+        </div>
+        <!-- web版 -->
+        <div class="contentKind">
+            <div class="kindPic"></div>
+            <div class="kindText">
+                <ul>
+                    <p class="kindDesc" id="descBig">依據香精含量可分成下列5種：</p>
+                    <li class="kindDesc" id="descBig">濃香精（PARFUM）</li>
+                    <p class="kindDesc" id="descSmall">香精含量為20%~40%，是所有香水中濃度最高的。香氣可維持6~8小時，屬於最持久的種類，適合晚上隆重場合或是晚會使用。</p>
+                    <li class="kindDesc" id="descBig">淡香精（EAU DE PARFUM）</li>
+                    <p class="kindDesc" id="descSmall">香精含量為10%~20%，香氣約可維持4~5小時。價格較為親民，也是市面上最為廣泛使用的類型。</p>
+                    <li class="kindDesc" id="descBig">淡香水（EAU DE TOILETTE）</li>
+                    <p class="kindDesc" id="descSmall">香精含量為5%~10%，香氣約可維持3小時左右，適合平日或是在辦公室使用。剛開始接觸香水的人也可以選擇淡香水當作第一罐
+                        香水，會比較容易適應。</p>
+                    <li class="kindDesc" id="descBig">古龍水（EAU DECOLOGNE）</li>
+                    <p class="kindDesc" id="descSmall">香精含量只有3%~5%，香味最淡的一款香水，味道通常也比較清爽，有不少人以為古龍水就等同於男性香水，但其實是因為男用
+                        香水濃度通常比女用香水低，香水廠商為了對男性消費者行銷，因此把古龍水當做男香的代稱。</p>
+                    <li class="kindDesc" id="descBig">清香水（EAU DEFRAICHE）</li>
+                    <p class="kindDesc" id="descSmall">香精含量约1-3%，在各個香水等级中香精含量最低。刮鬍水和體香劑都屬此等级。</p>
+                </ul>
+            </div>
+        </div>
+        <!-- Phone版 -->
+        <div class="contentKindPhone">
+            <!-- <div class="kindPicPhone"><img src="/img/03-kind/smallKind1.png" alt=""></div> -->
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-toggle="modal" data-target="#modalKind1"><img src="/img/03-kind/kind-1.png"
+                            alt=""></div>
+                    <div class="swiper-slide" data-toggle="modal" data-target="#modalKind2"><img src="/img/03-kind/kind-2.png"
+                            alt=""></div>
+                    <div class="swiper-slide" data-toggle="modal" data-target="#modalKind3"><img src="/img/03-kind/kind-3.png"
+                            alt=""></div>
+                    <div class="swiper-slide" data-toggle="modal" data-target="#modalKind4"><img src="/img/03-kind/kind-4.png"
+                            alt=""></div>
+                    <div class="swiper-slide" data-toggle="modal" data-target="#modalKind5"><img src="/img/03-kind/kind-5.png"
+                            alt=""></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- Modal -->
+            <!-- 濃香精 -->
+            <div class="modal fade" id="modalKind1" tabindex="-1" role="dialog" aria-labelledby="kindModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">濃香精（PARFUM）</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            香精含量為20%~40%，是所有香水中濃度最高的。香氣可維持6~8小時，屬於最持久的種類，適合晚上隆重場合或是晚會使用。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 淡香精 -->
+            <div class="modal fade" id="modalKind2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">淡香精（EAU DE PARFUM）</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            香精含量為10%~20%，香氣約可維持4~5小時。價格較為親民，也是市面上最為廣泛使用的類型。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 淡香水 -->
+            <div class="modal fade" id="modalKind3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">淡香水（EAU DE TOILETTE）</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            香精含量為5%~10%，香氣約可維持3小時左右，適合平日或是在辦公室使用。剛開始接觸香水的人也可以選擇淡香水當作第一罐
+                            香水，會比較容易適應。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 古龍水 -->
+            <div class="modal fade" id="modalKind4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">古龍水（EAU DECOLOGNE）</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            香精含量只有3%~5%，香味最淡的一款香水，味道通常也比較清爽，有不少人以為古龍水就等同於男性香水，但其實是因為男用
+                            香水濃度通常比女用香水低，香水廠商為了對男性消費者行銷，因此把古龍水當做男香的代稱。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 清香水 -->
+            <div class="modal fade" id="modalKind5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">清香水（EAU DEFRAICHE)</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            香精含量约1-3%，在各個香水等级中香精含量最低。刮鬍水和體香劑都屬此等级。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 香水味階 -->
+    <div class="flavor" id="perfumeFlavor">
+        <div class="mainHeader" id="flavorHeader">
+            <div class="mainTitle" id="flavorTitle">
+                <h2 class="title">香水味階</h2>
+            </div>
+        </div>
+        <div class="contentFlavor">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="flavorDesc col-12 col-sm-12 col-md-12">
+                        <p class="descSize">一種香水由各種各樣的香料做成，根據每種香料的濃度，揮發性的不同，隨著時間的變化可分為前味、中味、後味三個階段。</p>
+                    </div>
+                    <ul class="flavorText col-12 col-sm-12 col-md-6">
+                        <li class="descSize">前味(Top Notes)</li>
+                        <p class="descSize20">出現的時間約10至30分鐘，是您剛聞到香水的氣味，因為揮發性高所以持續的時間不是很久，通常「柑橘調」為調香師最常在前味使用的香料。</p>
+                        <li class="descSize">中味(Middle Notes)</li>
+                        <p class="descSize20">出現的時間約為香水使用後30分鐘至3小時，是香水的主要氣味，傳達著這瓶香水的精神，通常「花香調」及「果香調」最常在這裡出現。</p>
+                        <li class="descSize">後味(Base Notes)</li>
+                        <p class="descSize20">出現的時間約為2至3小時之後，是香水最後展現溫暖餘韻的時刻，通常以「樹木系」或「動物性」香料為最常使用的香料。</p>
+                    </ul>
+                    <div class="flavorPic col-12 col-sm-12 col-md-6">
+                        <img id="flavorImg" src="/img/04-flavor/flavor.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 香調分類 -->
+    <div class="note" id="perfumeNote">
+        <div class="mainHeader" id="noteHeader">
+            <div class="mainTitle" id="noteTitle">
+                <h2 class="title">香調分類</h2>
+            </div>
+        </div>
+        <div class="contentNote">
+            <!-- Swiper -->
+            <div class="swiper-container noteSwiperSize">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="perfumeFamilies col-md-6 col-sm-12 col-12"><img id="perfumeFamiliesImg" src="/img/05-note/perfumeFamilies.png"
+                                    alt=""></div>
+                            <div class="formDesc col-md-6 col-sm-12 col-12">
+                                <h4>香調表</h4>
+                                <p style="font-size:18px">香調是香水的一種分類規則，根據香水最主要的氣味及使用香料來劃分，香調表的結構並沒有一個統一的規則，其主要目的在告訴一款香水的主要特徵，幫助消費者選擇香水。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide allNoteSwiper">
+                        <div class="mainNote">
+                            <p class="noteKindTitle" style="font-size:22px">常見香調</p>
+                            <div class="allNote">
+                                <div class="noteKind" data-toggle="modal" data-target="#modalFlower">
+                                    <img class="noteKindPic" src="/img/05-note/flower.jpg" alt="">
+                                    <div class="noteKindName">
+                                        <p style="font-size:18px">花香調</p>
+                                    </div>
+                                </div>
+                                <div class="noteKind" data-toggle="modal" data-target="#modalOrange">
+                                    <img class="noteKindPic" src="/img/05-note/orange.jpg" alt="">
+                                    <div class="noteKindName">
+                                        <p style="font-size:18px">柑橘調</p>
+                                    </div>
+                                </div>
+                                <div class="noteKind" data-toggle="modal" data-target="#modalWood">
+                                    <img class="noteKindPic" src="/img/05-note/wood.jpg" alt="">
+                                    <div class="noteKindName">
+                                        <p style="font-size:18px">木質調</p>
+                                    </div>
+                                </div>
+                                <div class="noteKind" data-toggle="modal" data-target="#modalOriental">
+                                    <img class="noteKindPic" src="/img/05-note/oriental.jpg" alt="">
+                                    <div class="noteKindName">
+                                        <p style="font-size:18px">東方香調</p>
+                                    </div>
+                                </div>
+                                <div class="noteKind" data-toggle="modal" data-target="#modalSea">
+                                    <img class="noteKindPic" src="/img/05-note/sea.jpg" alt="">
+                                    <div class="noteKindName">
+                                        <p style="font-size:18px">海洋調</p>
+                                    </div>
+                                </div>
+                                <div class="noteKind"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!-- Modal -->
+            <!-- 花香調-->
+            <div class="modal fade" id="modalFlower" tabindex="-1" role="dialog" aria-labelledby="noteModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLongTitle">花香調</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>是以花香作為主基調像是玫瑰、薰衣草、橙花等等，又分單一花香調、清新花香調、乙醛花香調等，能激發歡樂的心情。</p>
+                            <hr>
+                            <h5>代表香水</h5>
+                            <div class="allperfume">
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/flowerDior.jpg" alt="">
+                                    <p style="line-height:24px;">Dior<br>
+                                        花漾迪奧精萃香氛</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/flowerChanel.jpg" alt="">
+                                    <p style="line-height:24px;">CHANEL<br>
+                                        No.5典藏女性淡香精</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/flowerChloe.jpg" alt="">
+                                    <p style="line-height:24px;">Chloé<br>
+                                        同名女性淡香精</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--柑橘調-->
+            <div class="modal fade" id="modalOrange" tabindex="-1" role="dialog" aria-labelledby="noteModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLongTitle">柑橘調</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>用檸檬、柑橘、佛手柑之類的水果為原料，帶有乾爽酸甜的水果香氣，讓人活力十足。適合喜愛運動、旅行的人。</p>
+                            <hr>
+                            <h5>代表香水</h5>
+                            <div class="allperfume">
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/orangeHermes.jpg" alt="">
+                                    <p style="line-height:24px;">HERMES<br>
+                                        尼羅河花園淡香水</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/orangeJoMalone.jpg" alt="">
+                                    <p style="line-height:24px;">Jo Malone London<br>
+                                        青檸羅勒與柑橘</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/orangeDiptyque.jpg" alt="">
+                                    <p style="line-height:24px;">Diptyque<br>
+                                        經典淡香水-海絲佩拉蒂</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 木質調 -->
+            <div class="modal fade" id="modalWood" tabindex="-1" role="dialog" aria-labelledby="noteModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLongTitle">木質調</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>用雪松、橡樹、檀香木等新鮮植物為原料，給人成熟穩重的感受，近年來蔚為風潮。木質調香氣，給你溫暖、無壓的懷抱感。</p>
+                            <hr>
+                            <h5>代表香水</h5>
+                            <div class="allperfume">
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/woodJoMalone.jpg" alt="">
+                                    <p style="line-height:24px;">Jo Malone London<br>
+                                        烏木與佛手柑芳醇古龍水</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/woodBvlgari.jpg" alt="">
+                                    <p style="line-height:24px;">Bvlgari<br>
+                                        黑茶中性古龍水</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/woodSergeLutens.jpg" alt="">
+                                    <p style="line-height:24px;">Serge Lutens<br>
+                                        白檀</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 東方香調 -->
+            <div class="modal fade" id="modalOriental" tabindex="-1" role="dialog" aria-labelledby="noteModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLongTitle">東方香調</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>最具異國風情的香調，是使用東方樹木或辛香料、樹脂、麝香等動物性香料調製的香水，東方調的香水往往給人神祕難以捉摸的想像，帶有深藏不露的吸引力。</p>
+                            <hr>
+                            <h5>代表香水</h5>
+                            <div class="allperfume">
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/orientalChanel.jpg" alt="">
+                                    <p style="line-height:24px;">CHANEL<br>
+                                        摩登COCO女性淡香水</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/orientalGuerlain.jpg" alt="">
+                                    <p style="line-height:24px;">嬌蘭<br>
+                                        一千零一夜淡香水</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/orientalYSL.jpg" alt="">
+                                    <p style="line-height:24px;">YSL<br>
+                                        黑鴉片淡香精</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 海洋調 -->
+            <div class="modal fade" id="modalSea" tabindex="-1" role="dialog" aria-labelledby="noteModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLongTitle">海洋調</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>在九○年代才出現的合成香氛，聞起來卻像海風、濕潤空氣，給人清新怡人的感覺。</p>
+                            <hr>
+                            <h5>代表香水</h5>
+                            <div class="allperfume">
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/seaHermes.jpg" alt="">
+                                    <p style="line-height:24px;">HERMES<br>
+                                        地中海花園淡香水</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/seaDavidoff.jpg" alt="">
+                                    <p style="line-height:24px;">Davidoff<br>
+                                        冷泉</p>
+                                </div>
+                                <div class="perfumePic">
+                                    <img id="perfumeSize" src="/img/05-note/seaIsseyMiyake.jpg" alt="">
+                                    <p style="line-height:24px;">Issey Miyake<br>
+                                        一生之水凝淨淡香精</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 使用指南 -->
+    <div class="instruction" id="perfumeInstruction">
+        <div class="mainHeader" id="instructionHeader">
+            <div class="mainTitle" id="instructionTitle">
+                <h2 class="title">使用指南</h2>
+            </div>
+        </div>
+        <nav class="option">
+            <a href="index.html">注意事項</a>
+            <a href="index_use.html">使用部位</a>
+            <a class="option-demo" href="index_way.html">保存方法</a>
+        </nav>
+        <div class="contentInstruction">
+            <div class="row">
+                <div class="precautions col-sm-12 col-12">
+                    <ul class="col-sm-12 col-12">
+                        <li>香水應該存放在陰涼的地方，避免陽光的照射，或者室內溫差大的環境下。</li>                        
+                        <li>香水置於高溫的環境下，香調容易走味，香水的色澤容易產生變化。</li>                        
+                        <li>香水的噴頭應保持清潔與乾燥，使用完畢後應將瓶蓋蓋起來，避免香水裡酒精成分的揮發。</li>
+                        <li>香水的保存溫度建議在10°C~27°C之間。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.6/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+</body>
+
+</html>

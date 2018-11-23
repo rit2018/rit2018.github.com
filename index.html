@@ -21,13 +21,22 @@
             padding: 0;
         }
         .navbarcolor{
-            background-color:transparent;
+            background-color:#3B1C6D;
+        }
+        
+        .navbar-light .navbar-nav .nav-link {
+            color:#A895C7;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+            color: white;
         }
 
         .navsize{
            font-size: 19pt;
-            color: deeppink;
+            /* color: deeppink; */
         }
+        
         .nav-bar{
             position: fixed;
             width: 100%;
@@ -307,7 +316,9 @@
     .formDesc{
         padding-right: 60px;
         text-align: left;
-        
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
     }
 
     /* 常見香調 */
@@ -356,14 +367,59 @@
     /* 使用指南 */
     .instruction{
         width: 100%;
-        height: 100vh;
+        height: auto;
+    }
+
+    .option{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .option a{
+        font-size: 16pt;
+        font-weight: bold;
+        color: #3B1C6D;
+        border: #3B1C6D solid 2px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-decoration:none;
+    }
+
+    .option a.option-demo,.option a:hover{
+        background-color: #3B1C6D;
+        color: white;
     }
 
     .contentInstruction{
-        width: 100%;
-        height: 75vh;
+        width: 61%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        padding-bottom: 150px;
     }
 
+    .precautions{
+        width: 100%;
+        height: auto;
+    }  
+
+
+    .precautions ul li{       
+        font-size: 20pt;
+    }
+
+     .precautions ul p{       
+        font-size: 16pt;
+     }
 
     @media only screen and (max-width:1148px){
         #descBig{
@@ -404,6 +460,7 @@
          /* 香水味階 */
      
          .contentFlavor{
+             width: 100%;
              padding-left: 20px;
              padding-right: 10px;
          }
@@ -420,6 +477,25 @@
             font-size: 13pt;
         }
 
+         /* 常見香調 */
+        .noteKind{
+            width: 30%;
+            height: 150px;
+        }
+
+        .noteKindPic{
+            width: 100%;
+            height: 100px;            
+        }
+
+        /* 使用指南 */
+        .contentInstruction{
+            width: 100%;
+        }
+
+        .option {
+            width: 70%;
+        }
         
     }
 
@@ -441,16 +517,50 @@
             font-size: 12pt;
         }
 
-         .flavorPic{
+        .flavorPic{
             background-image: url('/img/04-flavor/flavorSmall.png');
             background-size: cover;
             background-position: center;
         } 
 
         /* 常見香調 */
-        /* .allperfume{        
-           flex-direction:column;        
-         } */
+        .formDesc {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .noteSwiperSize{
+            width: 100%;
+            padding-bottom: 20px;
+        } 
+
+        .noteKind{
+            width: 45%;
+            height: 150px;
+            margin-bottom: 5px;
+        }
+
+        .noteKindPic{
+            width: 100%;
+            height: 100px;            
+        }
+
+        .allperfume {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+
+        #perfumeSize{
+            width: 100px;
+            height: 100px;
+         }
+
+         /* 使用指南 */
+         .option {
+             width: 100%;
+         }
+
      }
 
 
@@ -470,22 +580,23 @@
                 <div class="container">
                     <ul class="navbar-nav d-flex justify-content-center">
                         <li class="nav-item mx-3">
-                            <a class="nav-link font-weight-bold navsize" href="#">首頁 <span class="sr-only">(current)</span></a>
+                            <a class="nav-link font-weight-bold navsize" href="#carouselExampleSlidesOnly">首頁 <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link font-weight-bold navsize" href="#">香水歷史</a>
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeHistory">香水歷史</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link font-weight-bold navsize" href="#">香水種類</a>
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeKind">香水種類</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link font-weight-bold navsize" href="#">香水味接</a>
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeFlavor">香水味接</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link font-weight-bold navsize" href="#">香調分類</a>
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeNote">香調分類</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link font-weight-bold navsize" href="#">使用指南</a>
+                            <a class="nav-link font-weight-bold navsize" href="#perfumeInstruction">使用指南</a>
                         </li>
                     </ul>
                 </div>
@@ -512,7 +623,7 @@
             </div>
         </div>
     </div>
-    <div class="history">
+    <div class="history" id="perfumeHistory">
         <div class="mainHeader" id="historyHeader">
             <div class="mainTitle" id="historyTitle">
                 <h2 class="title">香水歷史</h2>
@@ -554,7 +665,7 @@
     </div>
 
     <!-- 香水種類 -->
-    <div class="kind">
+    <div class="kind" id="perfumeKind">
         <div class="mainHeader" id="kindHeader">
             <div class="mainTitle" id="kindTitle">
                 <h2 class="title">香水種類</h2>
@@ -697,7 +808,7 @@
     </div>
 
     <!-- 香水味階 -->
-    <div class="flavor">
+    <div class="flavor" id="perfumeFlavor">
         <div class="mainHeader" id="flavorHeader">
             <div class="mainTitle" id="flavorTitle">
                 <h2 class="title">香水味階</h2>
@@ -726,7 +837,7 @@
     </div>
 
     <!-- 香調分類 -->
-    <div class="note">
+    <div class="note" id="perfumeNote">
         <div class="mainHeader" id="noteHeader">
             <div class="mainTitle" id="noteTitle">
                 <h2 class="title">香調分類</h2>
@@ -746,7 +857,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide allNoteSwiper">
                         <div class="mainNote">
                             <p class="noteKindTitle" style="font-size:22px">常見香調</p>
                             <div class="allNote">
@@ -972,19 +1083,40 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
-
-    <div class="instruction">
+    <!-- 使用指南 -->
+    <div class="instruction" id="perfumeInstruction">
         <div class="mainHeader" id="instructionHeader">
             <div class="mainTitle" id="instructionTitle">
                 <h2 class="title">使用指南</h2>
             </div>
         </div>
+        <nav class="option">
+            <a class="option-demo" href="index.html">注意事項</a>
+            <a href="index_use.html">使用部位</a>
+            <a href="index_way.html">保存方法</a>
+        </nav>
         <div class="contentInstruction">
-
+            <div class="row">
+                <div class="precautions col-sm-12 col-12">
+                    <ul class="col-sm-12 col-12">
+                        <li>不要噴在日曬的地方</li>
+                        <p>香水最好不要噴洒在能被太陽曬到的位置，因為香水中含有一些從天然植物中萃取的香料，這些揮髮油含有呋喃香豆精成分，
+                            長期與紫外線接觸會發生化學反應，很容易會導致臉上或這身上出現皮膚炎或黑斑。</p>
+                        <li>不要直接噴在臉上</li>
+                        <p>香水含有大量的酒精，對皮膚的刺激性相對較大，如果直接將香水噴到臉上，很容易會造成肌膚敏感問題，本身就是敏感肌膚
+                            的女生更是要注意這點。</p>
+                        <li>不宜噴在出汗位置</li>
+                        <p>腋下和額頭這些屬於出汗較多的地方，這些位置每天都會產生大量的汗液，容易把香水沖淡，更加會讓香水混合汗液變成奇怪
+                            的味道。</p>
+                        <li>不要混合用</li>
+                        <p>不同種類的香水最好不要一起使用，因為混合後的香水香味會失去純味，而且很有可能混出讓人不愉快的味道。</p>
+                        <li>不宜噴灑過多</li>
+                        <p>香水不宜噴洒的過多，否則會適得其反，不僅會對周圍的人造成困擾，還容易導致嗅覺障礙問題。</p>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
