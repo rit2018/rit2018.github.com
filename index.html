@@ -292,17 +292,28 @@
     .noteSwiperSize{
         max-width: 1170px;
         height: auto;
+        padding-bottom: 50px;
     }   
+
+    .perfumeFamilies{
+        max-width: 100%;
+        height: auto;
+    }
+
+    #perfumeFamiliesImg{
+        max-width: 100%;
+    }
 
     .formDesc{
         padding-right: 60px;
         text-align: left;
+        
     }
 
     /* 常見香調 */
     .allNote{
         width: 100%;
-        height: 450px;
+        /* height: 450px; */
         display: flex;
         flex-wrap: wrap;
 	    justify-content: space-evenly;
@@ -362,13 +373,6 @@
         #descSmall{
             font-size: 12pt;
         }
-
-        /* 常見香調 */
-        /* .noteKind{
-        width: 260px;
-        height: 210px;
-        } */
-
     }
 
     /* 平板版 */
@@ -733,10 +737,13 @@
             <div class="swiper-container noteSwiperSize">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="/img/05-note/perfumeFamilies.png" alt="">
-                        <div class="formDesc">
-                            <p style="font-size:22px">香調表</p>
-                            <p style="font-size:18px">香調是香水的一種分類規則，根據香水最主要的氣味及使用香料來劃分，香調表的結構並沒有一個統一的規則，其主要目的在告訴一款香水的主要特徵，幫助消費者選擇香水。</p>
+                        <div class="row">
+                            <div class="perfumeFamilies col-md-6 col-sm-12 col-12"><img id="perfumeFamiliesImg" src="/img/05-note/perfumeFamilies.png"
+                                    alt=""></div>
+                            <div class="formDesc col-md-6 col-sm-12 col-12">
+                                <h4>香調表</h4>
+                                <p style="font-size:18px">香調是香水的一種分類規則，根據香水最主要的氣味及使用香料來劃分，香調表的結構並沒有一個統一的規則，其主要目的在告訴一款香水的主要特徵，幫助消費者選擇香水。</p>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
