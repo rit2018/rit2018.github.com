@@ -28,6 +28,11 @@
             color:#A895C7;
         }
 
+        .navbar-light .navbar-toggler {
+            border-color: #A895C7;
+            background-color: #A895C7;
+        }
+
         .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
             color: white;
         }
@@ -48,6 +53,9 @@
           background-position: center;
         }
 
+      .smallBanner{
+          display: none;
+      }  
 
       .history{
           width: 100%;
@@ -502,6 +510,13 @@
 
 
      @media only screen and (max-width:540px){
+        .bigBanner{
+            display: none;
+        }
+
+       .smallBanner{
+            display: inline-block;
+        }
          /* 香水歷史 */
          .contentHistory{
              padding: 0;
@@ -605,7 +620,8 @@
     </div>
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
+        <!-- web & iPad -->
+        <div class="carousel-inner bigBanner">
             <div class="carousel-item active">
                 <img class="d-block w-100 bannersize" src="/img/01-banner/banner1.jpg" alt="First slide">
             </div>
@@ -619,10 +635,31 @@
                 <img class="d-block w-100 bannersize" src="/img/01-banner/banner4.jpg" alt="fourth slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100 bannersize" src="/img/01-banner/banner11.jpg" alt="fifth slide">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner5.jpg" alt="fifth slide">
+            </div>
+        </div>
+        <!-- phone -->
+        <div class="carousel-inner smallBanner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner_phone1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner_phone2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner_phone3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner_phone4.jpg" alt="fourth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 bannersize" src="/img/01-banner/banner_phone5.jpg" alt="fifth slide">
             </div>
         </div>
     </div>
+
+
+    <!-- 香水歷史 -->
     <div class="history" id="perfumeHistory">
         <div class="mainHeader" id="historyHeader">
             <div class="mainTitle" id="historyTitle">
@@ -630,7 +667,6 @@
             </div>
         </div>
 
-        <!-- 香水歷史 -->
         <div class="contentHistory">
             <div class="container-fluid">
                 <div class="row origin">
@@ -1101,8 +1137,8 @@
             <div class="row">
                 <div class="precautions col-sm-12 col-12">
                     <ul class="col-sm-12 col-12">
-                        <li>香水應該存放在陰涼的地方，避免陽光的照射，或者室內溫差大的環境下。</li>                        
-                        <li>香水置於高溫的環境下，香調容易走味，香水的色澤容易產生變化。</li>                        
+                        <li>香水應該存放在陰涼的地方，避免陽光的照射，或者室內溫差大的環境下。</li>
+                        <li>香水置於高溫的環境下，香調容易走味，香水的色澤容易產生變化。</li>
                         <li>香水的噴頭應保持清潔與乾燥，使用完畢後應將瓶蓋蓋起來，避免香水裡酒精成分的揮發。</li>
                         <li>香水的保存溫度建議在10°C~27°C之間。</li>
                     </ul>
